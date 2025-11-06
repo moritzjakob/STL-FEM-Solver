@@ -1,9 +1,9 @@
 # STL FEM Solver
 
-**STL FEM Solver** is an interactive Python-based GUI application for performing **Finite Element Method (FEM) analysis** on STL geometries.  
-Built with **PySide6** and **VTK**, it allows users to load STL meshes, define materials, apply boundary conditions and add point or area loads.  
-The solver automatically generates tetrahedral meshes using **Gmsh**, chooses between direct or iterative solvers depending on mesh size and exports results in XDMF format for visualization of Von Mises stress, stress and strain components, displacements and more.  
-The application also creates a report summarizing mesh quality and FEM analysis results
+**STL FEM Solver** is an interactive Python-based GUI for performing Finite Element Method (FEM) simulations on STL geometries.
+Built with **PySide6**, **VTK** and **FEniCS**, it integrates **Gmsh** for mesh generation and **FEniCS** for solving the underlying FEM equations.
+Users can define materials, boundary conditions, and point or area loads, and visualize results such as stresses, strains and displacements in XDMF format.
+The solver automatically reports mesh quality metrics and FEM solution details.
 
 ---
 
@@ -62,10 +62,10 @@ The goal was to enable the user to load, refine, visualize and analyze FEM resul
 
 ### Visualization and Post-Processing
 - **Result Visualization:** Load and explore XDMF result files with multiple visualization modes:
-  - **Von Mises stress**
-  - **Stress components** 
-  - **Strain components**
-  - **Displacement magnitude**
+  - Von Mises stress
+  - Stress components 
+  - Strain components
+  - Displacement magnitude
 - **Deformation Display:**  
   - Toggle between visualizing deformed and undeformed meshes.  
   - Apply customizable displacement multipliers for exaggerated deformation visualization.  
@@ -149,7 +149,7 @@ These tests were also used to generate runtime and convergence data for the acco
 ### Available Test Categories
 
 **FEM Solver Tests:**  
-Evaluate solver correctness and stability by comparing computed result against known **analytical solution**.
+Evaluate solver correctness and stability by comparing computed result against known analytical solution.
 
 **Mesh Convergence Tests:**  
 Study the effect of mesh refinement on solution accuracy, including convergence of stress and displacement results.
@@ -176,7 +176,7 @@ python -m tests.validate_point_solver
 
 ## Technical Details / Architecture
 
-**STL FEM Solver** is a modular Python-based application that combines a GUI frontend with a finite element solver backend powered by **FEniCS** and **VTK**.  
+**STL FEM Solver** is a modular Python-based application that combines a GUI frontend with a finite element solver backend.  
 
 ### Core Technologies
 - **Programming Language:** Python 3  
