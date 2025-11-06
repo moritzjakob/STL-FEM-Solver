@@ -1,9 +1,9 @@
 # STL FEM Solver
 
 **STL FEM Solver** is an interactive Python-based GUI application for performing **Finite Element Method (FEM) analysis** on STL geometries.  
-Built with **PySide6** and **VTK**, it allows users to load STL meshes, define materials, apply **boundary conditions** and add **point or area loads**.  
-The solver automatically generates tetrahedral meshes using **Gmsh**, chooses between **direct or iterative solvers** depending on mesh size and exports results in **XDMF format** for visualization of **Von Mises stress**, **stress and strain components**, **displacements** and more.  
-The application also creates a **report** summarizing **mesh quality** and **FEM analysis results**.
+Built with **PySide6** and **VTK**, it allows users to load STL meshes, define materials, apply boundary conditions and add point or area loads.  
+The solver automatically generates tetrahedral meshes using **Gmsh**, chooses between direct or iterative solvers depending on mesh size and exports results in XDMF format for visualization of Von Mises stress, stress and strain components, displacements and more.  
+The application also creates a report summarizing mesh quality and FEM analysis results
 
 ---
 
@@ -23,7 +23,7 @@ The application also creates a **report** summarizing **mesh quality** and **FEM
 ## Purpose 
 
 This project was developed to provide a user-friendly graphical interface for working with **Finite Element Models (FEM)**.  
-The goal was to enable the user to **load, refine, visualize and analyze FEM results** such as stresses, strains and displacements in 3D.
+The goal was to enable the user to load, refine, visualize and analyze FEM results** such as stresses, strains and displacements in 3D.
 
 ---
 
@@ -40,23 +40,23 @@ The goal was to enable the user to **load, refine, visualize and analyze FEM res
 ### FEM Setup and Definition
 - **Material Selection:** Choose from available materials to assign material properties for FEM analysis.  
 - **Boundary Conditions:**  
-  - Define boundary constraints using **plane-based mesh selection**.  
+  - Define boundary constraints using plane-based mesh selection.  
   - Intuitive GUI interaction for applying boundary conditions.
 - **Load Definition:**  
   - **Point Loads:** Apply multiple point loads, each with an independent direction vector and magnitude.  
-    Visualize load directions via **arrow indicators** directly in the 3D scene.  
-  - **Area Loads:** Apply distributed loads by selecting facets individually or using a **paint tool** for faster region selection.  
+    Visualize load directions via arrow indicators directly in the 3D scene.  
+  - **Area Loads:** Apply distributed loads by selecting facets individually or using a paint tool for faster region selection.  
     Assign direction vectors and load values for the defined area.
 
 ---
 
 ### FEM Solving and Meshing
-- **Tetrahedral Meshing:** Automatically generate a tetrahedral volume mesh using **Gmsh** before solving.  
-- **Adaptive Solver Selection:** The program automatically chooses between a **direct solver** (for smaller meshes) and an **iterative solver** (for larger meshes) based on mesh size and complexity.  
-- **Result Export:** The solver produces a structured **results directory** containing:
-  - 'results_mesh.xdmf' — FEM result mesh for visualization  
-  - 'mesh_quality.json' — Metrics on mesh quality  
-  - 'fem_results.json' — Summary of FEM solution parameters and solver information  
+- **Tetrahedral Meshing:** Automatically generate a tetrahedral volume mesh using Gmsh before solving.  
+- **Adaptive Solver Selection:** The program automatically chooses between a direct solver (for smaller meshes) and an iterative solver (for larger meshes) based on mesh size and complexity.  
+- **Result Export:** The solver produces a structured results directory containing:
+  - 'results_mesh.xdmf' - FEM result mesh for visualization  
+  - 'mesh_quality.json' - Metrics on mesh quality  
+  - 'fem_results.json' - Summary of FEM solution parameters and solver information  
 
 ---
 
@@ -68,16 +68,16 @@ The goal was to enable the user to **load, refine, visualize and analyze FEM res
   - **Displacement magnitude**
 - **Deformation Display:**  
   - Toggle between visualizing deformed and undeformed meshes.  
-  - Apply customizable **displacement multipliers** for exaggerated deformation visualization.  
-  - Enable **overlay of the original mesh** to compare pre- and post-deformation geometry.
+  - Apply customizable displacement multipliers for exaggerated deformation visualization.  
+  - Enable overlay of the original mesh to compare pre- and post-deformation geometry.
 - **Result Loading:** Reload previously generated XDMF result files to review or analyze results independently of the solver.
 
 ---
 
 ### Visualization Controls and Customization
 - **Rendering Options:**  
-  - Change **background color** and **mesh color** for visual clarity.  
-  - Switch between **wireframe** and **solid shading** modes.  
+  - Change background color and mesh color for visual clarity.  
+  - Switch between wireframe and solid shading modes.  
 - **Selection Tools:** Easily pick points, facets or regions in the mesh for boundary condition or load assignment.
 
 ---
@@ -100,7 +100,7 @@ The goal was to enable the user to **load, refine, visualize and analyze FEM res
 ---
 
 ### Before You Begin
-Make sure **Anaconda** is installed on your system.  
+Make sure Anaconda is installed on your system.  
 If not, download and install it from the official website
 
 ### Setup Instructions
