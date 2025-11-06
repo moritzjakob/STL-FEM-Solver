@@ -2,7 +2,7 @@
 
 **STL FEM Solver** is an interactive Python-based GUI for performing Finite Element Method (FEM) simulations on STL geometries.
 Built with **PySide6**, **VTK** and **FEniCS**, it integrates **Gmsh** for mesh generation and **FEniCS** for solving the underlying FEM equations.
-Users can define materials, boundary conditions, and point or area loads, and visualize results such as stresses, strains and displacements in XDMF format.
+Users can define materials, boundary conditions and point or area load and visualize results such as stresses, strains and displacements in XDMF format.
 The solver automatically reports mesh quality metrics and FEM solution details.
 
 ---
