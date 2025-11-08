@@ -126,7 +126,7 @@ class FEMBaseSolver:
 
     # -------------------------------------------------------------------------
   
-    def _prepare_output_folder(self, file_name: str, analysis_type: str) -> None:
+    def _prepare_output_folder(self, file_name: str, analysis_type: str, output_root: str = None) -> None:
         """
         Create an output folder next to the input file.
 
@@ -138,10 +138,12 @@ class FEMBaseSolver:
         base_name = os.path.splitext(os.path.basename(file_name))[0]
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         result_folder_name = f"{base_name}_{analysis_type}_{timestamp}"
-
         
-        input_dir = os.path.dirname(os.path.abspath(file_name))
-        output_dir = os.path.join(input_dir, result_folder_name)
+        if output_root:
+            output_dir = os.path.join(output_root, result_folder_name)
+        else:
+            input_dir = os.path.dirname(os.path.abspath(file_name))
+            output_dir = os.path.join(input_dir, result_folder_name)
 
         os.makedirs(output_dir, exist_ok=True)
         self.output_dir = output_dir

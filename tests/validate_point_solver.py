@@ -109,7 +109,7 @@ class FEMSolverValidator:
             )
 
             solver = FEMPointSolver()
-            solver._prepare_output_folder(results_dir, stl_file, "validation_case")
+            solver._prepare_output_folder(stl_file, "validation_case", results_dir)
 
             start_time = time.perf_counter()
 

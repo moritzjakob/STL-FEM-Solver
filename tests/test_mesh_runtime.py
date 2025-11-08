@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
     # Choose which mesh group to test and number of runs
     number_of_runs = 3
-    mesh_type = "wrench"     
+    mesh_type = "dental"     
 
     mesh_groups = {
         "beam": [
