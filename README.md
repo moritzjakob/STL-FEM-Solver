@@ -23,7 +23,7 @@ The solver automatically reports mesh quality metrics and FEM solution details.
 ## Purpose 
 
 This project was developed to provide a user-friendly graphical interface for working with **Finite Element Models (FEM)**.  
-The goal was to enable the user to load, refine, visualize and analyze FEM results** such as stresses, strains and displacements in 3D.
+The goal was to enable the user to load, refine, visualize and analyze FEM results such as stresses, strains and displacements in 3D.
 
 ---
 
@@ -107,7 +107,7 @@ If not, download and install it from the official website
 
 1. **Clone the Repository**
    ```bash
-   git clone [Insert here]
+   git clone https://github.com/moritzjakob/STL-FEM-Solver.git
    cd STL-FEM-Solver
    ```
 
