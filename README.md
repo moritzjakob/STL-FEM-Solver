@@ -84,7 +84,30 @@ The goal was to enable the user to load, refine, visualize and analyze FEM resul
 
 ## Screenshots
 
-[Insert images here]
+### Area Load Example
+
+The following figure shows the application of an area load, suitable for modeling distributed loads such as self-weight.
+
+![Area load application](docs/screenshots/AreaLoad_Wrench.png)
+
+### Point Load Validation Case
+
+A point load is applied at the free end of the beam to match the analytical validation model.
+
+![Point load on beam](docs/screenshots/PointLoad_Beam.png)
+
+### Displacement Field
+
+The displacement magnitude can be visualized either on the deformed mesh or overlaid on the undeformed configuration.
+
+![Displacement magnitude](docs/screenshots/PointLoad_Displacement.png)
+
+### Stress Results
+
+Von Mises stress distribution for the validated point load case.
+
+![Von Mises stress](docs/screenshots/VonMises.png)
+
 
 ---
 
@@ -130,7 +153,8 @@ If not, download and install it from the official website
 
 ## Examples / Video Walkthrough
 
-- Demo Video: [Insert link here]  
+- Demo Video: (https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
 
 ---
 
