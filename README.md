@@ -153,7 +153,7 @@ If not, download and install it from the official website
 
 ## Examples / Video Walkthrough
 
-- Demo Video: (https://youtu.be/TbCOEyGcgG8)
+- Demo Video: (https://youtu.be/spzpVR6iuig)
 
 
 ---
