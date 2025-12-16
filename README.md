@@ -130,14 +130,7 @@ If not, download and install it from the official website
 
 ## Examples / Video Walkthrough
 
-- Example Point Load STL File: [Insert link here]  
-- Example Point Load XDMF File: [Insert link here]  
-- Demo Point Load Video: [Insert link here]  
-
-
-- Example Area Load STL File: [Insert link here]  
-- Example Area XDMF File: [Insert link here]
-- Demo Area Load Video: [Insert link here]  
+- Demo Video: [Insert link here]  
 
 ---
 
@@ -159,7 +152,7 @@ Measure solver execution time and meshing time for different mesh sizes and load
 
 ### Note on Large Test Files
 
-One test case used a high-resolution STL file ('beam_extreme_fine.stl') which exceeds GitHub’s file size limit
+One test case used a high-resolution STL file ('beam_extreme_fine.stl') which exceeds GitHub's file size limit
 and is therefore not included in this repository.
 
 ---
