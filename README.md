@@ -157,6 +157,11 @@ Study the effect of mesh refinement on solution accuracy, including convergence 
 **Runtime Performance Tests:**  
 Measure solver execution time and meshing time for different mesh sizes and loads.
 
+### Note on Large Test Files
+
+One test case used a high-resolution STL file ('beam_extreme_fine.stl') which exceeds GitHub’s file size limit
+and is therefore not included in this repository.
+
 ---
 
 ### Running the Tests
