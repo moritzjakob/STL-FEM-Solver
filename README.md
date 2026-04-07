@@ -279,7 +279,7 @@ STL-FEM-Solver/
 ---
 
 ## Documentation and Report
-For a complete description of the project design, implementation and validation results, see the [Project Report (PDF)] [docs/report/stl_fem_solver_report_moritz-jakob_til-gramlich.pdf].
+For a complete description of the project design, implementation and validation results, see the [Project Report (PDF)](docs/report/stl_fem_solver_report_moritz-jakob_til-gramlich.pdf).
 
 ---
 
