@@ -1,8 +1,8 @@
 # STL FEM Solver
 
 **STL FEM Solver** is an interactive Python-based GUI for performing Finite Element Method (FEM) simulations on STL geometries.
-Built with **PySide6**, **VTK** and **FEniCS**, it integrates **Gmsh** for mesh generation and **FEniCS** for solving the underlying FEM equations.
-Users can define materials, boundary conditions and point or area load and visualize results such as stresses, strains and displacements in XDMF format.
+Built with **PySide6**, **VTK** and **FEniCS**, it integrates **Gmsh** for mesh generation and **FEniCS** for solving the underlying finite element equations.
+Users can define materials, boundary conditions and point or area loads and visualize results such as stresses, strains and displacements in XDMF format.
 The solver automatically reports mesh quality metrics and FEM solution details.
 
 ---
@@ -12,17 +12,17 @@ The solver automatically reports mesh quality metrics and FEM solution details.
 - [Features / Main Functions](#features--main-functions)
 - [Screenshots](#screenshots)
 - [Installation / Setup](#installation--setup)
-- [Examples / Video Walkthrough](#examples--video-walkthrough)
 - [Testing and Validation](#testing-and-validation)
 - [Technical Details / Architecture](#technical-details--architecture)
 - [Documentation and Report](#documentation-and-report)
+- [Video Walkthrough](#video-walkthrough)
 - [Potential Extensions and Enhancements](#potential-extensions-and-enhancements)
 
 ---
 
 ## Purpose 
 
-This project was developed to provide a user-friendly graphical interface for working with **Finite Element Models (FEM)**.  
+This project was developed to provide a user-friendly graphical interface for working with the **Finite Element Method (FEM)**.  
 The goal was to enable the user to load, refine, visualize and analyze FEM results such as stresses, strains and displacements in 3D.
 
 ---
@@ -32,7 +32,7 @@ The goal was to enable the user to load, refine, visualize and analyze FEM resul
 
 ### Geometry Import and Mesh Refinement
 - **Load STL Files:** Import 3D geometries in STL format for preprocessing and simulation setup.  
-- **Mesh Refinement:** Refine the imported mesh through subdivision (level 2 refinement) to improve resolution and element quality.  
+- **Mesh Refinement:** Refine the imported mesh through a simple subdivision to improve resolution and element quality.  
 - **Save Refined Mesh:** Export and reuse refined meshes for later analysis.
 
 ---
@@ -40,13 +40,13 @@ The goal was to enable the user to load, refine, visualize and analyze FEM resul
 ### FEM Setup and Definition
 - **Material Selection:** Choose from available materials to assign material properties for FEM analysis.  
 - **Boundary Conditions:**  
-  - Define boundary constraints using plane-based mesh selection.  
+  - Define boundary constraints using plane-based selection on the mesh.  
   - Intuitive GUI interaction for applying boundary conditions.
 - **Load Definition:**  
   - **Point Loads:** Apply multiple point loads, each with an independent direction vector and magnitude.  
     Visualize load directions via arrow indicators directly in the 3D scene.  
   - **Area Loads:** Apply distributed loads by selecting facets individually or using a paint tool for faster region selection.  
-    Assign direction vectors and load values for the defined area.
+    Assign a direction vector and a load value for the defined area.
 
 ---
 
@@ -108,6 +108,30 @@ Von Mises stress distribution for the point load case.
 
 ![Von Mises stress](docs/screenshots/VonMises.png)
 
+### Area Load Example
+
+The following figure shows the application of an area load.
+
+![Area load application](docs/screenshots/AreaLoad_Wrench.png)
+
+### Point Load Validation Case
+
+Point loads are applied at the free end of the beam.
+
+![Point load on beam](docs/screenshots/PointLoad_Beam.png)
+
+### Displacement Field
+
+The displacement magnitude can be visualized either on the deformed mesh or overlaid on the undeformed mesh.
+
+![Displacement magnitude](docs/screenshots/PointLoad_Displacement.png)
+
+### Stress Results
+
+Von Mises stress distribution for the point load case.
+
+![Von Mises stress](docs/screenshots/VonMises.png)
+
 
 ---
 
@@ -124,7 +148,7 @@ Von Mises stress distribution for the point load case.
 
 ### Before You Begin
 Make sure Anaconda is installed on your system.  
-If not, download and install it from the official website
+If not, download and install it from the official website.
 
 ### Setup Instructions
 
@@ -151,13 +175,6 @@ If not, download and install it from the official website
 
 ---
 
-## Examples / Video Walkthrough
-
-- Demo Video: (https://youtu.be/spzpVR6iuig)
-
-
----
-
 ## Testing and Validation
 
 To verify the accuracy and performance of the FEM solver and meshing routines, a set of dedicated test scripts is included in the 'tests/' directory.  
@@ -166,10 +183,10 @@ These tests were also used to generate runtime and convergence data for the acco
 ### Available Test Categories
 
 **FEM Solver Tests:**  
-Evaluate solver correctness and stability by comparing computed result against known analytical solution.
+Evaluate solver correctness and stability by comparing a computed result against a known analytical solution.
 
 **Mesh Convergence Tests:**  
-Study the effect of mesh refinement on solution accuracy, including convergence of stress and displacement results.
+Study the effect of mesh refinement on solution accuracy, including a convergence analysis.
 
 **Runtime Performance Tests:**  
 Measure solver execution time and meshing time for different mesh sizes and loads.
@@ -220,7 +237,7 @@ STL-FEM-Solver/
 |-- fem_app/                          # Main application source package
 |   |
 |   |-- core/                         
-|   |   |-- app_context.py            # Manages global state, paths, and shared configuration
+|   |   |-- app_context.py            # Manages global state, paths and shared configuration
 |   |
 |   |-- fem/                          
 |   |   |-- fem_base.py               # Common FEM routines and helper functions
@@ -229,8 +246,8 @@ STL-FEM-Solver/
 |   |
 |   |-- gui/                           
 |   |   |-- components/               # GUI widgets (main window, header, sidebar panels)
-|   |   |-- controller/               # Sidebar logic, button actions, and GUI event coordination
-|   |   |-- gui_state/                # Tracks active selections, load definitions, and UI state
+|   |   |-- controller/               # Sidebar logic, button actions and GUI event coordination
+|   |   |-- gui_state/                # Tracks active selections, load definitions and UI state
 |   |
 |   |-- mesh/                         
 |   |   |-- mesh_generator.py         # Handles STL import, tetrahedral meshing and refinement via Gmsh
@@ -262,7 +279,13 @@ STL-FEM-Solver/
 ---
 
 ## Documentation and Report
-For a complete description of the project design, implementation and validation results, see the [Project Report (PDF)] [insert here].
+For a complete description of the project design, implementation and validation results, see the [Project Report (PDF)] [docs/report/stl_fem_solver_report_moritz-jakob_til-gramlich.pdf].
+
+---
+
+## Video Walkthrough
+
+- Demo Video: (https://youtu.be/spzpVR6iuig)
 
 ---
 
@@ -284,7 +307,7 @@ While the current version of **STL FEM Solver** provides a robust platform for s
 
 - **Multi-Object FEM Simulation:**  
   Enable support for multiple geometries within the same simulation.  
-  This would allow interaction between separate bodies, such as contact or load transfer 
+  This would allow interaction between separate bodies, such as contact or load transfer.
 
 - **Additional FEM Analysis Modes**  
   Extend beyond linear static structural analysis to include thermal, modal and transient simulations, providing a broader range of engineering applications.
@@ -293,5 +316,3 @@ While the current version of **STL FEM Solver** provides a robust platform for s
   Explore multi-threading and solver parallelization to handle larger, more complex models efficiently.
 
 ---
-
-
